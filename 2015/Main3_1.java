@@ -3,7 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
-public class Main3 {
+public class Main3_1 {
     public static void main(String [] args){
         //number of houses delivered
         String fileName="2015/3.txt";
@@ -22,23 +22,19 @@ public class Main3 {
             int num=0;
             int houses=1;
             boolean santa=false;
+
             while ((num = br.read()) != -1) {
-                santa=!santa;
+                santa=(!santa);
+
                 move = (char) num;
                 //move and update pos
-                if(move=='<' && santa){x--;}
-                else if(move=='>' && santa){x++;}
-                else if(move=='^' && santa){y++;}
-                else if(move=='v' && santa){y--;}
-                if(move=='<' && !santa){xR--;}
-                else if(move=='>' && !santa){xR++;}
-                else if(move=='^' && !santa){yR++;}
-                else if(move=='v' && !santa){yR--;}
-
+                if(move=='<'){x--;}
+                else if(move=='>'){x++;}
+                else if(move=='^'){y++;}
+                else if(move=='v'){y--;}
 
                 //if exists
-                if(santa)pos=x+"-"+y;
-                else pos=xR+"-"+yR;
+                pos=x+"-"+y;
 
                 if(hm.containsKey(pos)){
                     int count=hm.get(pos);

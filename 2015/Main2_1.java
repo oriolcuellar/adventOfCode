@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.PriorityQueue;
 
-public class Main21 {
+public class Main2_1 {
     public static void main(String[] args){
         //read line
         String filePath="2015/2.txt";

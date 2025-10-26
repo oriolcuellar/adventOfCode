@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Main11 {
+public class Main1_1 {
 
     public static void main(String[] args){
         int res=0;
